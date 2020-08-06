@@ -12,14 +12,22 @@ Take the https address and add it to a ```config/development.json``` file that m
 
 Make sure you have expo-cli ```npm install -g expo-cli```
 
-To run the app locally:
+Install dependencies ```npm install```
 
-```bash
-npm install
+
+## Usage
+
+To see ios and android:
+
+```bash 
 expo start
 ```
 
-## Usage
+To see the web version:
+
+```bash 
+npm run web
+```
 
 
 ## Contributing
