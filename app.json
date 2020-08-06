@@ -21,6 +21,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "expoConfig": {
+        "https_server": "https://2d9cccec44f4.ngrok.io/graphql"
+      }
     }
   }
 }

@@ -1,4 +1,6 @@
 node_modules/**/*
+server/node_modules
+config/development.json
 .expo/*
 npm-debug.*
 *.jks
