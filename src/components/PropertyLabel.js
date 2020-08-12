@@ -5,7 +5,8 @@ const PropertyLabel = (props) => {
     const styles = {
         container: {
             flex: 1,
-            flexDirection: 'row'
+            flexDirection: 'row',
+            width: '100%'
         },
         text: {
             flex:1
