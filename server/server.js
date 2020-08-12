@@ -2,25 +2,39 @@ var express = require('express');
 var { graphqlHTTP } = require('express-graphql');
 var { buildSchema } = require('graphql');
 var cors = require('cors')
+const { GraphQLJSON } = require('graphql-type-json');
 
-
-
-// Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
+scalar JSON
   type Query {
-    hello: String
-  }
+    getProperty: JSON
+    }
 `);
 
-// The root provides a resolver function for each API endpoint
 var root = {
-  hello: () => {
-    return 'Hello world!';
-  },
-};
+  JSON: GraphQLJSON,
+
+  getProperty: () => {
+    return {
+      id: 123,
+      name: "Best Unit",
+      address: "123 beaver rd",
+      city: "Virginia Beach",
+      st: "VA",
+      zip: 23451,
+      bedrooms: 3,
+      bathrooms: 2,
+      floors: 1,
+      rent: 1200,
+      floorplan: "https://statesmanapartments.com/wp-content/uploads/A-1-bed-1-bath-789-2.jpg"
+    }
+  }
+}
+
+
 
 var app = express();
-app.use(cors({"origin": "*"}))
+app.use(cors({ "origin": "*" }))
 app.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: root,

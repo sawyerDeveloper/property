@@ -24,7 +24,7 @@
     },
     "extra": {
       "expoConfig": {
-        "https_server": "https://2d9cccec44f4.ngrok.io/graphql"
+        "https_server": "https://927cb927d8de.ngrok.io/graphql"
       }
     }
   }
