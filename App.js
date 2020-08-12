@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import Main from './Main'
+import Main from './src/Main'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 import config from 'expo-config'
 export default function App() {
-  console.log(config)
+
   const client = new ApolloClient({
     uri: config.https_server,
     cache: new InMemoryCache()
