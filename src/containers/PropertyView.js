@@ -1,7 +1,11 @@
 import React from 'react'
 import { View, Image} from 'react-native'
 import PropertyLabel from '../components/PropertyLabel'
-
+const GET_PROPERTY = gql`
+  query {
+    getProperty(id)
+  }
+`
 const PropertyView = (props) => {
     const data = props.data
 

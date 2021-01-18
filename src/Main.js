@@ -2,9 +2,9 @@ import React, { useRef } from 'react'
 import { Animated, Text, View } from 'react-native'
 import { useQuery, gql } from '@apollo/client'
 import PropertyView from './containers/PropertyView'
-const GET_PROPERTY = gql`
+const GET_PROPERTIES = gql`
   query {
-    getProperty
+    getProperties
   }
 `
 export default function Main() {
